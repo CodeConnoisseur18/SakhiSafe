@@ -86,7 +86,7 @@ header{
     cursor: pointer;
     margin-left: auto;
     margin-right: 12px;
-    transform: translateX(-8px);
+    transform: translateX(-12px);
 }
 /* HERO */
 .hero{
@@ -342,53 +342,59 @@ footer p{
         gap: 12px;
     }
 }
-@media (max-width: 768px){
-    .navbar{
-        flex-wrap: wrap;
+
+@media (max-width: 768px) {
+
+    .navbar {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 15px;
     }
-    .menu-toggle{
+
+    /* Menu button on the LEFT */
+    .menu-toggle {
         display: block;
-        margin-left: auto;
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0;
+        font-size: 28px;
     }
-    .nav-links{
+
+    /* Logo beside the menu */
+    .logo {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    /* Navigation links */
+    .nav-links {
         display: none;
+        grid-column: 1 / -1;
         width: 100%;
         flex-direction: column;
         gap: 15px;
         padding: 15px 0;
     }
-    .nav-links.show{
+
+    .nav-links.show {
         display: flex;
     }
-    .hero{
+
+    /* Login and Sign Up */
+    .nav-buttons {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+    }
+
+    /* Keep your existing hero responsive styles */
+    .hero {
         flex-direction: column;
         text-align: center;
         padding: 45px 6%;
     }
-    .hero-description{
-        margin: auto;
-    }
-    .hero-buttons{
-        justify-content: center;
-    }
-    .hero-image{
-        width: 100%;
-        max-width: 380px;
-        min-height: 320px;
-    }
-    .floating-text{
-        right: 0;
-    }
-    .feature-container{
-        grid-template-columns: repeat(2,1fr);
-    }
-    .steps{
-        grid-template-columns: 1fr;
-    }
-    .resources{
-        text-align: center;
-    }
 }
+
 @media (max-width: 450px)
 {
     .feature-container{
