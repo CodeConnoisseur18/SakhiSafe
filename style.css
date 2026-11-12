@@ -78,12 +78,15 @@ header{
     color: white;
 }
 .menu-toggle{
-    display: none;
+    display: block;
     border: none;
     background: none;
     color: #42106e;
     font-size: 26px;
     cursor: pointer;
+    margin-left: auto;
+    margin-right: 12px;
+    transform: translateX(-8px);
 }
 /* HERO */
 .hero{
